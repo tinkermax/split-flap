@@ -1,0 +1,28 @@
+﻿pos_x,pos_y,rotation,side,designator,mpn,pack,value,mount_type,place
+111.76,-104.648,-90.0,top,A1,,A4988_Stepper_Module,A4988,tht,True
+133.35,-104.648,-90.0,top,A2,,A4988_Stepper_Module,A4988,tht,True
+154.94,-104.648,-90.0,top,A3,,A4988_Stepper_Module,A4988,tht,True
+176.53,-104.648,-90.0,top,A4,,A4988_Stepper_Module,A4988,tht,True
+86.36,-121.412,-90.0,top,C1,,CP_Radial_D6.3mm_P2.50mm,100uF,tht,True
+94.02,-98.298,0.0,top,C2,,CP_Radial_D6.3mm_P2.50mm,100uF,tht,True
+115.61,-98.298,0.0,top,C3,,CP_Radial_D6.3mm_P2.50mm,100uF,tht,True
+137.2,-98.298,0.0,top,C4,,CP_Radial_D6.3mm_P2.50mm,100uF,tht,True
+158.79,-98.298,0.0,top,C5,,CP_Radial_D6.3mm_P2.50mm,100uF,tht,True
+94.02,-93.218,0.0,top,C6,,C_Disc_D3.4mm_W2.1mm_P2.50mm,100nF,tht,True
+115.61,-93.218,0.0,top,C7,,C_Disc_D3.4mm_W2.1mm_P2.50mm,100nF,tht,True
+137.2,-93.218,0.0,top,C8,,C_Disc_D3.4mm_W2.1mm_P2.50mm,100nF,tht,True
+158.79,-93.218,0.0,top,C9,,C_Disc_D3.4mm_W2.1mm_P2.50mm,100nF,tht,True
+84.19,-89.916,0.0,top,J1,,IDC-Header_2x10_P2.54mm_Vertical,Units 0-3,tht,True
+165.27,-85.328,0.0,top,J10,B5B-XH-A(LF)(SN),JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical,motor 0/4/8,tht,True
+131.572,-93.218,0.0,top,J2,,PinHeader_1x01_P2.54mm_Vertical,GND CALIB,tht,True
+94.92,-84.328,0.0,top,J3,,PinSocket_1x03_P2.54mm_Vertical,sens3,tht,True
+100.49,-85.328,0.0,top,J4,B5B-XH-A(LF)(SN),JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical,motor 3/7/11,tht,True
+116.51,-84.328,0.0,top,J5,,PinSocket_1x03_P2.54mm_Vertical,sens2,tht,True
+122.08,-85.328,0.0,top,J6,B5B-XH-A(LF)(SN),JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical,motor 2/6/10,tht,True
+138.1,-84.328,0.0,top,J7,,PinSocket_1x03_P2.54mm_Vertical,sens1,tht,True
+143.67,-85.328,0.0,top,J8,B5B-XH-A(LF)(SN),JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical,motor 1/5/9,tht,True
+159.7,-84.328,0.0,top,J9,,PinSocket_1x03_P2.54mm_Vertical,sens0,tht,True
+109.075,-93.65,0.0,top,REF1,,MountingHole_3.2mm_M3_Pad,MountingHole_3.2mm_M3_Pad,tht,False
+169.075,-93.65,0.0,top,REF2,,MountingHole_3.2mm_M3_Pad,MountingHole_3.2mm_M3_Pad,tht,False
+109.075,-123.65,0.0,top,REF3,,MountingHole_3.2mm_M3_Pad,MountingHole_3.2mm_M3_Pad,tht,False
+169.075,-123.65,0.0,top,REF4,,MountingHole_3.2mm_M3_Pad,MountingHole_3.2mm_M3_Pad,tht,False

@@ -1,0 +1,29 @@
+﻿pos_x,pos_y,rotation,side,designator,mpn,pack,value,mount_type,place
+127.0,-66.08,-90.0,top,C1,,C_Disc_D3.4mm_W2.1mm_P2.50mm,100nF,tht,True
+144.78,-68.327,-90.0,top,C2,,CP_Radial_D5.0mm_P2.00mm,10uF,tht,True
+149.2977,-37.3,-90.0,top,C3,,C_Disc_D3.4mm_W2.1mm_P2.50mm,100nF,tht,True
+172.72,-106.68,-90.0,top,C4,,C_Disc_D3.4mm_W2.1mm_P2.50mm,100nF,tht,True
+132.08,-106.72,-90.0,top,C5,,C_Disc_D3.4mm_W2.1mm_P2.50mm,100nF,tht,True
+114.295,-64.56,-90.0,top,J1,,TerminalBlock_TE_282834-3_1x03_P2.54mm_Horizontal,+9V IN,tht,True
+114.295,-43.18,0.0,top,J2,,PinSocket_1x04_P2.54mm_Vertical,Chain I2C,tht,True
+114.295,-78.74,180.0,top,J3,,PinSocket_1x02_P2.54mm_Vertical,Button1,tht,True
+114.295,-58.765,180.0,top,J4,,PinSocket_1x02_P2.54mm_Vertical,Button2,tht,True
+196.58,-90.79,0.0,top,J5,,IDC-Header_2x10_P2.54mm_Vertical,Units 0-3,tht,True
+116.235,-90.79,0.0,top,J6,,IDC-Header_2x10_P2.54mm_Vertical,Units 4-7,tht,True
+156.9075,-90.79,0.0,top,J7,,IDC-Header_2x10_P2.54mm_Vertical,Units 8-11,tht,True
+126.705,-43.18,0.0,top,R1,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,4K7,tht,True
+126.705,-48.26,0.0,top,R2,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,4K7,tht,True
+193.61,-47.35,180.0,top,R3,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,4K7,tht,True
+193.61,-42.23,180.0,top,R4,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,4K7,tht,True
+114.915,-35.5,0.0,top,REF1,,MountingHole_3.2mm_M3_Pad,MountingHole_3.2mm_M3_Pad,tht,False
+199.915,-35.5,0.0,top,REF2,,MountingHole_3.2mm_M3_Pad,MountingHole_3.2mm_M3_Pad,tht,False
+114.915,-124.5,0.0,top,REF3,,MountingHole_3.2mm_M3_Pad,MountingHole_3.2mm_M3_Pad,tht,False
+199.905,-124.5,0.0,top,REF4,,MountingHole_3.2mm_M3_Pad,MountingHole_3.2mm_M3_Pad,tht,False
+188.385,-58.42,90.0,top,TP1,5000,Test_Point_D1.02mm,5000,tht,True
+188.385,-63.5,90.0,top,TP2,5000,Test_Point_D1.02mm,5000,tht,True
+188.385,-68.58,90.0,top,TP3,5000,Test_Point_D1.02mm,5000,tht,True
+188.385,-53.34,0.0,top,TP4,5000,Test_Point_D1.02mm,5000,tht,True
+137.16,-71.12,90.0,top,U1,LD1117V33,TO-220-3,LD1117V33,tht,True
+156.675,-32.3216,0.0,top,U2,,ESP32-DevKitC,ESP32-DevKitC,tht,True
+134.62,-86.36,0.0,top,U3,MCP23017-E/SP,DIP-28_W7.62mm,MCP23017,tht,True
+175.26,-86.36,0.0,top,U4,MCP23017-E/SP,DIP-28_W7.62mm,MCP23017,tht,True

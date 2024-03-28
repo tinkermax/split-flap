@@ -1,0 +1,15 @@
+Reference,Value,Footprint,Qty
+"C1,C3,C4,C5",100nF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,4
+C2,10uF,Capacitor_THT:CP_Radial_D5.0mm_P2.00mm,1
+J1,+9V IN,TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-3_1x03_P2.54mm_Horizontal,1
+J2,Chain I2C,Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical,1
+J3,Button1,Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical,1
+J4,Button2,Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical,1
+J5,Units 0-3,Connector_IDC:IDC-Header_2x10_P2.54mm_Vertical,1
+J6,Units 4-7,Connector_IDC:IDC-Header_2x10_P2.54mm_Vertical,1
+J7,Units 8-11,Connector_IDC:IDC-Header_2x10_P2.54mm_Vertical,1
+"R1,R2,R3,R4",4K7,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,4
+"TP1,TP2,TP3,TP4",5000,digikey-footprints:Test_Point_D1.02mm,4
+U1,LD1117V33,digikey-footprints:TO-220-3,1
+U2,ESP32-DevKitC,PCM_Espressif:ESP32-DevKitC,1
+"U3,U4",MCP23017,digikey-footprints:DIP-28_W7.62mm,2

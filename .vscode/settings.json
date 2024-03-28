@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "MLTable": "yaml",
+        "new": "cpp",
+        "*.tcc": "cpp",
+        "random": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "system_error": "cpp",
+        "array": "cpp"
+    }
+}

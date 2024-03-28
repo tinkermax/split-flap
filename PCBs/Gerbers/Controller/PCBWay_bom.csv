@@ -1,0 +1,16 @@
+﻿designator,quantity,value,pack,mpn,mount_type
+"C1, C3, C4, C5",4,100nF,C_Disc_D3.4mm_W2.1mm_P2.50mm,,tht
+C2,1,10uF,CP_Radial_D5.0mm_P2.00mm,,tht
+J1,1,+9V IN,TerminalBlock_TE_282834-3_1x03_P2.54mm_Horizontal,,tht
+J2,1,Chain I2C,PinSocket_1x04_P2.54mm_Vertical,,tht
+J3,1,Button1,PinSocket_1x02_P2.54mm_Vertical,,tht
+J4,1,Button2,PinSocket_1x02_P2.54mm_Vertical,,tht
+J5,1,Units 0-3,IDC-Header_2x10_P2.54mm_Vertical,,tht
+J6,1,Units 4-7,IDC-Header_2x10_P2.54mm_Vertical,,tht
+J7,1,Units 8-11,IDC-Header_2x10_P2.54mm_Vertical,,tht
+"R1, R2, R3, R4",4,4K7,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,,tht
+"REF1, REF2, REF3, REF4",4,MountingHole_3.2mm_M3_Pad,MountingHole_3.2mm_M3_Pad,,tht
+"TP1, TP2, TP3, TP4",4,5000,Test_Point_D1.02mm,5000,tht
+U1,1,LD1117V33,TO-220-3,LD1117V33,tht
+U2,1,ESP32-DevKitC,ESP32-DevKitC,,tht
+"U3, U4",2,MCP23017,DIP-28_W7.62mm,MCP23017-E/SP,tht

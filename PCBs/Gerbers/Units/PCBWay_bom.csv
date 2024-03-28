@@ -1,0 +1,15 @@
+﻿designator,quantity,value,pack,mpn,mount_type
+"A1, A2, A3, A4",4,A4988,A4988_Stepper_Module,,tht
+"C1, C2, C3, C4, C5",5,100uF,CP_Radial_D6.3mm_P2.50mm,,tht
+"C6, C7, C8, C9",4,100nF,C_Disc_D3.4mm_W2.1mm_P2.50mm,,tht
+J1,1,Units 0-3,IDC-Header_2x10_P2.54mm_Vertical,,tht
+J10,1,motor 0/4/8,JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical,B5B-XH-A(LF)(SN),tht
+J2,1,GND CALIB,PinHeader_1x01_P2.54mm_Vertical,,tht
+J3,1,sens3,PinSocket_1x03_P2.54mm_Vertical,,tht
+J4,1,motor 3/7/11,JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical,B5B-XH-A(LF)(SN),tht
+J5,1,sens2,PinSocket_1x03_P2.54mm_Vertical,,tht
+J6,1,motor 2/6/10,JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical,B5B-XH-A(LF)(SN),tht
+J7,1,sens1,PinSocket_1x03_P2.54mm_Vertical,,tht
+J8,1,motor 1/5/9,JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical,B5B-XH-A(LF)(SN),tht
+J9,1,sens0,PinSocket_1x03_P2.54mm_Vertical,,tht
+"REF1, REF2, REF3, REF4",4,MountingHole_3.2mm_M3_Pad,MountingHole_3.2mm_M3_Pad,,tht
