@@ -17,7 +17,7 @@
 
 #define STR_HELPER(x) #x
 #define STR(x) STR_HELPER(x)
-#define WORDNIKURL "https://api.wordnik.com/v4/words.json/randomWord?hasDictionaryDef=true&excludePartOfSpeech=family-name%2Cgiven-name%2Cproper-noun%2Cproper-noun-plural%2Cproper-noun-posessive&minCorpusCount=100&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=" STR(MINWORDLEN) "&maxLength=" STR(UNITCOUNT) "&api_key=" WORDNIKAPIKEY
+#define WORDNIKURL "https://api.wordnik.com/v4/words.json/randomWord?hasDictionaryDef=true&excludePartOfSpeech=family-name%2Cgiven-name%2Cproper-noun%2Cproper-noun-plural&minCorpusCount=100&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=" STR(MINWORDLEN) "&maxLength=" STR(UNITCOUNT) "&api_key=" WORDNIKAPIKEY
 #define NTP_MIN_VALID_EPOCH 1577836800  //2020-1-1
 #define RTC_MAGIC 0x76b78ec4
 
