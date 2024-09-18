@@ -22,7 +22,9 @@ This is an alternate electronics and firmware for David Kingsman's [Split-Flap D
 DEBUG 1
 <br/>
 ### Specify the number of Units (characters) in your display (4 -12) in [system.h](include/system.h):
-unitCount = 12;
+unitCount 12
+### Specify the network name of the display (useful if you have more than one display) in [system.h](include/system.h):
+NETWORKNAME "splitflap"
 <br/>
 ### Customise for each unit for your build. (Units are numbered left to right 0 - 11) in [unit.h](include/unit.h):
 calOffsetUnit : an array of the offsets to move from hall sensor trigger to blank flap<br/>

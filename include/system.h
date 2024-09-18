@@ -15,6 +15,9 @@
 // Specify number of Units (characters) in the display (4 - 12)
 #define UNITCOUNT 12
 
+// Specify the network name of the display (useful if you have more than one display)
+#define NETWORKNAME "splitflap"
+
 #define STR_HELPER(x) #x
 #define STR(x) STR_HELPER(x)
 #define WORDNIKURL "https://api.wordnik.com/v4/words.json/randomWord?hasDictionaryDef=true&excludePartOfSpeech=family-name%2Cgiven-name%2Cproper-noun%2Cproper-noun-plural&minCorpusCount=100&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=" STR(MINWORDLEN) "&maxLength=" STR(UNITCOUNT) "&api_key=" WORDNIKAPIKEY

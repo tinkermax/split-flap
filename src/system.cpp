@@ -123,12 +123,12 @@ void setup_routing() {
   server.begin();    
 
   // Setup mDNS to allow connection via hostname
-  if (!MDNS.begin("splitflap")) {   // Set the hostname to "splitflap.local"
+  if (!MDNS.begin(NETWORKNAME)) {   // Set the hostname NETWORKNAME defined in system.h: by default "splitflap.local"
     debugln("Error setting up MDNS responder!");
   }
 
   MDNS.addService("http", "tcp", 80);
-  MDNS.addServiceTxt("http", "tcp", "splitflap", "1");
+  MDNS.addServiceTxt("http", "tcp", NETWORKNAME, "1");
 }
 
 void sendwebpage() {

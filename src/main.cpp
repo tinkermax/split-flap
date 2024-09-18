@@ -38,6 +38,7 @@ boolean diplayStillMoving();
 
 // Global vars
 uint32_t previousMillis = 0;
+uint32_t displayLastStoppedMillis;
 uint32_t nextWordAPIMillis = 0;
 MCP23017 mcp_en_steppers = MCP23017(0x20);
 MCP23017 mcp_sensor = MCP23017(0x21);
@@ -164,6 +165,8 @@ void setup() {
     debugln("Retrying NTP...");
   }
 
+  displayLastStoppedMillis = 0;
+
 #if DEBUG == 1
   print_test_menu();
 #endif
@@ -200,7 +203,9 @@ void loop() {
     // Rest API server
     server.handleClient();
 
+    //If display not moving, check if anything new to display
     if (!diplayStillMoving()) {
+      displayLastStoppedMillis = millis();
 
       // Check if need to redisplay after reboot
       if (previous_display[0] != '\0') {
@@ -217,6 +222,7 @@ void loop() {
 
       else if (getting_first_word) {
         String word = wordOfTheDay();
+        displayLastStoppedMillis = millis();
         debugf("Word, %02d:%02d, [%s]\n", timeinfo.tm_hour, timeinfo.tm_min, word);
         displayString(word);    
         nextWordAPIMillis = millis() + 60000; //dont check again until this minute passed
@@ -233,6 +239,7 @@ void loop() {
 
             nextWordAPIMillis = (millis() + (3600 / WORDUPDATESPERHOUR) * 1000) - 3000; //dont check again until nearly next word update time
             String word = wordOfTheDay();
+            displayLastStoppedMillis = millis();
             debugf("Word, %02d:%02d, [%s]\n", timeinfo.tm_hour, timeinfo.tm_min, word);
             displayString(word);
 
@@ -254,6 +261,14 @@ void loop() {
       // else if (digitalRead(button1Pin) == 0) {
       //   do something;
       // }
+    }
+    //If display has been moving for more than 20 seconds, must be an error condition
+    else if (millis() - displayLastStoppedMillis > 20000) {
+      debugln(TXT_RED "Moving > 20 secs - RESTARTING!!!" TXT_RST);
+      nvmem.magic = RTC_MAGIC;
+      strncpy(nvmem.previous_display,save_display,13);
+      nvmem.reboot_count = reboot_count;
+      ESP.restart();
     }
 
     // Handle interactive serial commands over USB (used for debugging)

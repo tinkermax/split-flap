@@ -84,17 +84,16 @@ void Unit::moveSteppertoLetter(char toLetter) {
   destinationLetter = toLetter;
 
   uint8_t flapsToMove = flapsToRotateToLetter(toLetter, &recalibrate);
-  // debugf("flapsToMove %d\n", flapsToMove);
+  debugf("Unit %02d flapsToMove %d\n", unitNum, flapsToMove);
 
   if (recalibrate) {
     calibrationComplete = false;
     pendingLetter = toLetter;
-    // debugf("Unit %02d pendingLetter '%c'\n", unitNum, pendingLetter);
+    debugf("Unit %02d pendingLetter '%c'\n", unitNum, pendingLetter);
     debugf("Pending,%02d,'%c'\n", unitNum, pendingLetter);
   }
   else {
-    // debugf("Unit %02d move to '%c'\n", unitNum, toLetter);
-    // debugf("Move,%02d,'%c'\n", unitNum, toLetter);
+    debugf("Unit %02d move to '%c'\n", unitNum, toLetter);
     moveStepperbyFlap(flapsToMove);
     pendingLetter = 0;
   }
@@ -110,14 +109,14 @@ void Unit::calibrateStart() {
 
   // if starting within range of the sensor, need to move outside range before doing calibration
   if (currentHallValue == 0) {
-      // debugf("preInitialise started for Unit %d\n", unitNum);
+      debugf("preInitialise started for Unit %d\n", unitNum);
       preInitialise = true;
   }
   else {
       preInitialise = false;
   }
 
-  // debugf("Calibration started for Unit %d\n", unitNum);
+  debugf("Calibration started for Unit %d\n", unitNum);
   
   stepper->runForward();
 }
@@ -139,7 +138,7 @@ int8_t Unit::calibrate() {
     // if reached end of preinitialisation phase
     if (preInitialise == true && currentHallValue == 1) {
       preInitialise = false;
-      // debugf("preInitialise completed for Unit %d\n", unitNum);
+      debugf("preInitialise completed for Unit %d\n", unitNum);
     }
     //if still in preinitialising phase, keep moving
     else if (preInitialise == true) {
@@ -148,8 +147,9 @@ int8_t Unit::calibrate() {
     // if sensor reached, do calibration
     else if (currentHallValue == 0) {
       // reached marker, go to calibrated offset position
-      // debugf("Calb,%02d\n", unitNum);
+      debugf("Calb,%02d\n", unitNum);
       stepper->forceStopAndNewPosition(0);
+      delay(1); // attempt to fix rare hangup
       stepper->move(calOffsetUnit[unitNum]);
       currentLetterPosition = 0;
       missedSteps = 0;
@@ -157,7 +157,7 @@ int8_t Unit::calibrate() {
       calibrationStarted = false;
       // Reset speed
       // stepper->setSpeedInUs(rotationSpeeduS);  // the parameter is us/step
-      // debugf("Unit %d calibrated\n", unitNum);
+      debugf("Unit %d calibrated\n", unitNum);
       return 1;
       }
 
