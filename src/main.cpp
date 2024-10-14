@@ -59,6 +59,7 @@ uint8_t reboot_count;
 String localIP;
 FastAccelStepperEngine engine;
 extern WebServer server;
+uint8_t word_updates_per_hour = WORDUPDATESPERHOUR; //store config value in variable to prevent div by zero compiler warnings
 
 // RTC memory structure - for persisting data between reboots
 typedef struct {
@@ -221,30 +222,30 @@ void loop() {
       }
 
       else if (getting_first_word) {
-        String word = wordOfTheDay();
-        displayLastStoppedMillis = millis();
-        debugf("Word, %02d:%02d, [%s]\n", timeinfo.tm_hour, timeinfo.tm_min, word);
-        displayString(word);    
-        nextWordAPIMillis = millis() + 60000; //dont check again until this minute passed
-
+        if (word_updates_per_hour > 0) {
+          String word = wordOfTheDay();
+          displayLastStoppedMillis = millis();
+          debugf("Word, %02d:%02d, [%s]\n", timeinfo.tm_hour, timeinfo.tm_min, word);
+          displayString(word);    
+          nextWordAPIMillis = millis() + 60000; //dont check again until this minute passed
+        }
         getting_first_word = false;
       }
 
       // Display random word according to WORDUPDATESPERHOUR
-      else if (WORDUPDATESPERHOUR > 0 && ((uint32_t)millis() > nextWordAPIMillis)) {
+      else if (word_updates_per_hour > 0 && ((uint32_t)millis() > nextWordAPIMillis)) {
         // Only update during daytime hours
         if (getNTP(now, timeinfo)) {
-          if ((timeinfo.tm_min % (60 / WORDUPDATESPERHOUR) == 0) && (timeinfo.tm_hour >= 8 && timeinfo.tm_hour <= 19)) {
+          if ((timeinfo.tm_min % (60 / word_updates_per_hour) == 0) && (timeinfo.tm_hour >= 8 && timeinfo.tm_hour <= 19)) {
             reboot_count = 0;
-
-            nextWordAPIMillis = (millis() + (3600 / WORDUPDATESPERHOUR) * 1000) - 3000; //dont check again until nearly next word update time
+            nextWordAPIMillis = (millis() + (3600 / word_updates_per_hour) * 1000) - 3000; //dont check again until nearly next word update time
             String word = wordOfTheDay();
             displayLastStoppedMillis = millis();
             debugf("Word, %02d:%02d, [%s]\n", timeinfo.tm_hour, timeinfo.tm_min, word);
             displayString(word);
 
             // For testing only (changes all characters and requires a drum rotation + calibration each time)
-            // nextWordAPIMillis = (millis() + (3600 / WORDUPDATESPERHOUR) * 1000) - 3000; //dont check again until nearly next word update time
+            // nextWordAPIMillis = (millis() + (3600 / word_updates_per_hour) * 1000) - 3000; //dont check again until nearly next word update time
             // String thisSeq = "@@@@@@@@@@@@";
             // charSeq--;
             // if (charSeq == 0) {
